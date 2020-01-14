@@ -30,8 +30,8 @@ def add_string_as_number(string1, string2)
   return string1.to_i() + string2.to_i()
 end
 
-def number_to_full_month_name(num)
-  case num
+def number_to_full_month_name(month_num)
+  case month_num
   when 1
     return "January"
   when 2
@@ -61,8 +61,8 @@ def number_to_full_month_name(num)
   end
 end
 
-def number_to_short_month_name(num)
-  case num
+def number_to_short_month_name(month_num)
+  case month_num
   when 1
     return "Jan"
   when 2
@@ -92,11 +92,14 @@ def number_to_short_month_name(num)
   end
 end
 
-def volume_of_cube(num)
-  return num**3
+def volume_of_cube(edge)
+  return edge**3
 end
 
-def radius_of_a_sphere(num)
+def volume_of_sphere(radius)
+  return ((4.0/3.0) * Math::PI * (radius.to_f**3)).round(1)
+end
 
-
+def fahrenheit_to_celsius(fahrenheit)
+  return ((fahrenheit - 32) * (5.0/9.0)).round(1)
 end
